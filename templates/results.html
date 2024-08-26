@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="container-fluid px-0">
+
+</div>
+<div class="container py-5">
+    
+    {% for item in results %}
+       <div class="card">
+        <div class="card-img">
+            <img src="{{item.poster}}" alt="{{item.movie}}" class="img-fluid">
+        </div>
+        {{item.movie}}
+       </div>
+    {% endfor %}
+</div>
+{% endblock %}
+{% block js %}
+<script>
+
+</script>
+{% endblock %}
+{% block css %}
+<style>
+
+</style>
+{% endblock %}
+{% block head %}{% endblock %}

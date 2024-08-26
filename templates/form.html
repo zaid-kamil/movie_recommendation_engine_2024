@@ -1,0 +1,75 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="container-fluid px-0">
+
+</div>
+<div class="container py-5">
+    <div class="row">
+        <div class="col-md-6">
+            <form action="/results" class="card" method="post">
+                <div class="card-header">
+                    <h5 class="card-title">Get Recommendation</h5>
+                </div>
+                <div class="card-body">
+                    <input type="hidden" name="by" value="name">
+                    <div class="d-flex">
+
+                        <div class="mb-3 flex-grow-1 me-2">
+                            <label for="name" class="form-label">Movie</label>
+                            <input type="text" class="form-control form-control-lg" name="name" id="name"
+                                aria-describedby="helpId" placeholder="Raja Hindustani..." />
+                            <small id="helpId" class="form-text text-muted"></small>
+                        </div>
+                        <div class="mb-3">
+                            <label for="count" class="form-label"># of results</label>
+                            <input type="number" class="form-control form-control-lg" name="count" id="count" min="5"
+                                max="25" size="2" maxlength="2" placeholder="5" value="5" />
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <button class="btn btn-lg btn-outline-primary">Find Similar Movie</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="col-md-6">
+            <form action="/results" class="card" method="post">
+                <div class="card-header">
+                    <h5 class="card-title">Search any keyword</h5>
+                </div>
+                <div class="card-body">
+                    <input type="hidden" name="by" value="word">
+                    <div class="d-flex">
+                        <div class="mb-3 flex-grow-1 me-2">
+                            <label for="name" class="form-label">Keyword</label>
+                            <input type="text" class="form-control form-control-lg" name="name" id="name"
+                                aria-describedby="helpId" placeholder="Kung Fu" />
+                            <small id="helpId" class="form-text text-muted"></small>
+                        </div>
+                        <div class="mb-3">
+                            <label for="count" class="form-label"># of results</label>
+                            <input type="number" class="form-control form-control-lg" name="count" id="count" min="5"
+                                max="25" size="2" maxlength="2" placeholder="5" value="5" />
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <button class="btn btn-lg btn-outline-primary">Find with Keywords</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+    </div>
+</div>
+{% endblock %}
+{% block js %}
+<script>
+
+</script>
+{% endblock %}
+{% block css %}
+<style>
+
+</style>
+{% endblock %}
+{% block head %}{% endblock %}
